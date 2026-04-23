@@ -5,10 +5,7 @@ function Activities() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const apiBase = process.env.REACT_APP_CODESPACE_NAME
-    ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-    : 'http://localhost:8000';
-  const apiUrl = `${apiBase}/api/activities/`;
+  const apiUrl = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`;
 
   useEffect(() => {
     console.log('Activities: fetching from', apiUrl);
