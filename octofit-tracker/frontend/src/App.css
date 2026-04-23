@@ -1,0 +1,187 @@
+/* OctoFit Tracker — global app styles */
+
+:root {
+  --octofit-navy:   #1a1a2e;
+  --octofit-dark:   #0f3460;
+  --octofit-mid:    #16213e;
+  --octofit-red:    #e94560;
+  --octofit-bg:     #f0f2f5;
+  --octofit-text:   #212529;
+  --octofit-muted:  #6c757d;
+  --octofit-link:   #0f3460;
+  --octofit-link-hover: #e94560;
+}
+
+body {
+  background-color: var(--octofit-bg);
+  color: var(--octofit-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: var(--octofit-link);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--octofit-link-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--octofit-navy);
+}
+
+/* ── Buttons ────────────────────────────────────── */
+.btn-octofit {
+  background-color: var(--octofit-red);
+  border-color: var(--octofit-red);
+  color: #fff;
+}
+
+.btn-octofit:hover {
+  background-color: #c73652;
+  border-color: #c73652;
+  color: #fff;
+}
+
+/* ── Navbar ────────────────────────────────────── */
+.octofit-navbar {
+  background: linear-gradient(135deg, var(--octofit-navy) 0%, var(--octofit-mid) 60%, var(--octofit-dark) 100%) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.octofit-navbar .navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.octofit-navbar .navbar-brand .brand-logo {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.octofit-navbar .navbar-brand .brand-text {
+  color: var(--octofit-red);
+}
+
+.octofit-navbar .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.2s;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.375rem;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(233, 69, 96, 0.2);
+}
+
+.octofit-navbar .nav-link.active {
+  color: var(--octofit-red) !important;
+  background-color: rgba(233, 69, 96, 0.15);
+}
+
+/* ── Hero / welcome banner ──────────────────────── */
+.octofit-hero {
+  background: linear-gradient(135deg, var(--octofit-navy) 0%, var(--octofit-dark) 100%);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.octofit-hero .hero-logo {
+  height: 90px;
+  width: 90px;
+  object-fit: contain;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.octofit-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--octofit-red);
+  margin-bottom: 0.5rem;
+}
+
+.octofit-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Cards ──────────────────────────────────────── */
+.octofit-card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(135deg, var(--octofit-navy) 0%, var(--octofit-dark) 100%);
+  color: #fff;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 3px solid var(--octofit-red);
+}
+
+.octofit-card .card-header h4 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+/* ── Tables ─────────────────────────────────────── */
+.octofit-table thead th {
+  background-color: var(--octofit-dark);
+  color: #fff;
+  border-color: #1a4a80;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.6px;
+  vertical-align: middle;
+}
+
+.octofit-table tbody td {
+  vertical-align: middle;
+  color: var(--octofit-text);
+}
+
+.octofit-table tbody tr:hover {
+  background-color: rgba(233, 69, 96, 0.06);
+}
+
+.octofit-table tbody tr:nth-child(even) {
+  background-color: rgba(15, 52, 96, 0.04);
+}
+
+/* ── Badge for rank ─────────────────────────────── */
+.rank-badge {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.rank-1 { background-color: #ffd700; color: #333; }
+.rank-2 { background-color: #c0c0c0; color: #333; }
+.rank-3 { background-color: #cd7f32; color: #fff; }
+.rank-default { background-color: #0f3460; color: #fff; }
+
